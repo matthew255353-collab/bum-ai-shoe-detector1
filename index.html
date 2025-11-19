@@ -1,0 +1,56 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Shoe Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+     <header>
+        <h1>AI Shoe Detector 👟</h1>
+    </header>
+
+    <div class="tabs">
+        <button class="tab-button active" onclick="openTab('analyze')">🔍 วิเคราะห์</button>
+        <button class="tab-button" onclick="openTab('search')">🔎 ค้นหา</button>
+    </div>
+
+    <main>
+        <!-- แท็บวิเคราะห์ -->
+        <section id="analyze" class="tab-content active">
+            <div class="upload-box">
+                <h2>อัปโหลดรูปภาพรองเท้า</h2>
+                <input type="file" id="imageInput" accept="image/*">
+                <div class="image-frame">
+                    <img id="previewImage" src="" alt="พรีวิวรูปภาพ">
+                </div>
+                <button id="analyzeButton">วิเคราะห์ภาพ</button>
+                <p id="resultText"></p>
+            </div>
+        </section>
+
+        <!-- แท็บค้นหา -->
+        <section id="search" class="tab-content">
+            <h2>ค้นหารองเท้า</h2>
+            <input type="text" id="searchInput" placeholder="พิมพ์ชื่อรองเท้าที่ต้องการค้นหา...">
+            <button onclick="searchShoes()">ค้นหา</button>
+            <ul id="searchResults"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>สร้างโดย AI 💙</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+
+
+
+</body>
+</html>
